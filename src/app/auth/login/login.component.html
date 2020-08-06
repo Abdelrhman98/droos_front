@@ -1,0 +1,19 @@
+
+<mat-card class="login">
+    <mat-card-header>
+        <mat-card-title>Login {{this.test}}</mat-card-title>
+        <mat-card-subtitle>D r o o s</mat-card-subtitle>
+    </mat-card-header>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput class='input'>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" *ngIf="test">
+            <mat-label>password</mat-label>
+            <input matInput class='input'>
+        </mat-form-field>
+        <button mat-btn>login</button>
+    </form>
+</mat-card>
+
