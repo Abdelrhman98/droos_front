@@ -11,6 +11,9 @@ import {MaterialModule} from './material/material.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component'
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {AuthService} from './services/auth.service';
+import { HttpClientModule }from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +27,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

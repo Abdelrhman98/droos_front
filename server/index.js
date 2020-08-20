@@ -5,8 +5,10 @@ var cookieParser = require('cookie-parser')
 //var logger = require('morgan')
 var app = express()
 
+const port = process.env.port || 3000;
+
 // routers here
-var usersRouter = require('./routes/users')
+var usersRouter = require('./app/routes/users')
 //add mongoose
 var mongoose = require('mongoose')
 //mongoose.connect('')
@@ -20,8 +22,8 @@ app.use(cors({
     origin:'http://localhost:4200'
 }))
 
-app.listen(3000, () => {
-  console.log('Example app listening at ')
+app.listen(port, () => {
+  console.log('server started')
 })
 
 module.exports = app;
