@@ -42,7 +42,7 @@ export class SignupComponent implements OnInit {
 	}
 
 	isValid(controlName){
-		return this.regForm.get(controlName).invalid && this.regForm.get(controlName).touched;	
+		return this.regForm.get(controlName).invalid && this.regForm.get(controlName).touched;
 	}
 
 	register(){
