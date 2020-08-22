@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "upnode": "nvm use v14"
+    "upnode": "nvm use v14",
+    "server":"nodemon server/index.js"
   },
   "private": true,
   "dependencies": {

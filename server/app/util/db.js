@@ -1,13 +1,15 @@
 const mongoose = require('mongoose')
+const user = 'bodey';
+const password = '01144046291a';
+const URI = `mongodb+srv://${user}:${password}@cluster0.yl1lj.mongodb.net/droos?retryWrites=true&w=majority`
 
-const URI = ''
 
+const connectDB = async()=> {
+    await mongoose.connect(URI,{
+        useUnifiedTopology:true,
+        useNewUrlParser:true
+    });
+    console.log('database connected.....!')
+}
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://<username>:<password>@droos.zqwsu.mongodb.net/<dbname>?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+module.exports = connectDB;

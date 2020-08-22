@@ -2,11 +2,12 @@ var createError = require('http-errors')
 var express = require('express')
 var path= require('path')
 var cookieParser = require('cookie-parser')
+const connectDB = require('./app/util/db')
 //var logger = require('morgan')
 var app = express()
 
 const port = process.env.port || 3000;
-
+connectDB();
 // routers here
 var usersRouter = require('./app/routes/users')
 //add mongoose
