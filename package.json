@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "upnode": "nvm use v14",
-    "server":"nodemon server/index.js"
+    "server": "nodemon server/index.js"
   },
   "private": true,
   "dependencies": {
@@ -24,11 +24,15 @@
     "@angular/platform-browser": "~10.0.4",
     "@angular/platform-browser-dynamic": "~10.0.4",
     "@angular/router": "~10.0.4",
+    "@hapi/joi": "^17.1.1",
     "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
     "bootstrap": "^3.4.1",
     "bulma": "^0.9.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "joi": "^17.2.1",
     "jquery": "^3.5.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.0",

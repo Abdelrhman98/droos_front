@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user')
-router.post('/register', function(req, res, next){
+router.post('/register2', function(req, res, next){
     var user = new User({
         email:req.body.email,
         username:req.body.username,

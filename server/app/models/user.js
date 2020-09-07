@@ -3,10 +3,11 @@ var schema = mongoose.Schema;
 var bcrypt = require('bcrypt');
 
 var schema =  new schema({
+    name:{type:String, require:true},
     email:{type:String, require:true},
     username:{type:String, require:true},
     password:{type:String,  require:true},
-    createdAt:{type:Date,require:true}
+    //createdAt:{type:Date,require:true}
 });
 
 schema.statics.hashPassword = function hashPassword(password) {
@@ -17,4 +18,4 @@ schema.methods.isValid = function(hashedPassword){
     return bcrypt.compareSync(hashedPassword,this.password);
 }
 
-module.exports = mongoose.model('User',schema);
+module.exports = mongoose.model('user',schema);
